@@ -31,12 +31,12 @@ p{
 .navbar-custom{
     transition: 0.7s;
     background: 
-    linear-gradient(45deg, rgba(92,47,90,0) 50%, rgba(92,47,90,0) 50%) no-repeat bottom;
+    linear-gradient(45deg, rgba(92,47,90,0) 50%, rgba(1,1,1,0.5) 50%) no-repeat bottom;
     width: 100%;
     font-family: 'Lato';
     letter-spacing: 7px;
     font-size: 14px;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /* change the brand and text color */
@@ -112,7 +112,7 @@ p{
 .landing-page{
     margin-top: -20px;
     height: 685px;
-    background:rgba(23, 37, 42, 0.76);
+    background:rgba(23, 37, 42, 0.66);
     z-index: -6;
 }
 
@@ -126,7 +126,7 @@ p{
 
 .my-name-home{
     position: absolute;
-    margin: 260px 200px;
+    margin: 250px 200px;
     margin-left: 6%;
     font-family: 'Lato';
     z-index: 1;
@@ -148,19 +148,19 @@ p{
 }
 
 .my-name-home .my-btn{
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 8px 35px 2px;
-    border: 1px solid #FFF700;
+    border: 2px solid #FFF700;
     background: transparent;
     color: #FFF700;
     transition: 0.7s;
 }
 
 .my-name-home .my-btn:hover{
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 8px 35px 2px;
     background: #FFF700;
-    color: #17252A;
+    color: black;
     transition: 0.7s;
 }
 
@@ -218,7 +218,7 @@ p{
   position: absolute;
   width: 100%;
 	padding: 20px;
-	background-color: #222;
+	background-color: #B5B5B5;
   z-index: 5;
 }
 
@@ -247,51 +247,56 @@ p{
 /*------------------------card---------------------------*/
 
 .card {
-  display: block;
-    border: 1px solid dark;
-    margin-bottom: 20px;
+    display: block;
+    border: none;
+    margin-bottom: 5px;
     line-height: 1.42857143;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     transition: box-shadow .25s;
 }
 
 .card-body{
-  border-radius: 5px;
-  background-color: #ebebeb;
+  border-radius: 0px;
+  background-color: #fff;
+  opacity: 0.9;
   color: black;
 }
 
 .card:hover {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.card-img-top{
-  padding-bottom: 15px;
-}
 
+.card-img-top{
+  padding-bottom: 5px;
+}
 
 .card-content {
   text-align:left;
-  padding: 15px;
+  padding: 10px;
 }
+
 .card-title {
   padding: 15px;
-  margin-top:15px;
+  margin-top:5px;
   font-family: 'Playfair Display';
   font-weight: 900;
-  font-size: 1.65em;
+  font-size: 1.25em;
 }
+
 .card-title a {
-  color: #000;
+  color: #333;
   text-decoration: none !important;
 }
+
 .card-read-more {
   border-top: 1px solid #D4D4D4;
 }
+
 .card-read-more a {
   text-decoration: none !important;
-  padding:10px;
+  padding:5px;
   font-weight:600;
   text-transform: uppercase
 }
@@ -316,6 +321,11 @@ p{
 /*----------------mobile site optimization---------------------*/
 
 @media(max-width:580px){
+    
+    .navbar-custom{
+      background: 
+        linear-gradient(45deg, rgba(92,47,90,0) 50%, rgba(1,1,1,0) 50%) no-repeat bottom;
+  }
   
     .navbar-collapse{
         transition: 0.7s;
@@ -382,13 +392,19 @@ p{
     }
 
     .my-photo{
-        margin-top: 52px;
+        margin-top: 92px;
         max-height: 740px;
         margin-left: 80px;
         position: fixed;
         max-width: 468px;
         z-index: -5;
         opacity: 0.5;
+    }
+  
+    .my-photo-path1{
+      position: fixed;
+      height: 100%;
+      opacity: 0.2;
     }
 
     .explore-btn{
