@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Oswald:300,500,700" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+
+  
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery.fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  
+    <script type="text/javascript">
+      $('#fullpage').fullpage();
+    </script>
+  
+    <script>
+        document.addEventListener('DOMContentLoaded',function(event){
+        // array with texts to type in typewriter
+        var dataText = [ "c o m p u t e r <br> e n g i n e e r", "f r e e l a n c e <br> g r a p h i c <br> d e s i g n e r", "w e b <br> d e v e l o p e r"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+          // chekc if text isn't finished yet
+          if (i < (text.length)) {
+            // add next character to h1
+           document.querySelector(".animated-text").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+            // wait for a while and call this function again for next character
+            setTimeout(function() {
+              typeWriter(text, i + 1, fnCallback)
+            }, 50);
+          }
+          // text finished, call callback if there is a callback function
+          else if (typeof fnCallback == 'function') {
+            // call callback after timeout
+            setTimeout(fnCallback, 700);
+          }
+        }
+        // start a typewriter animation for a text in the dataText array
+         function StartTextAnimation(i) {
+           if (typeof dataText[i] == 'undefined'){
+              setTimeout(function() {
+                StartTextAnimation(0);
+              }, 1000);
+           }
+           // check if dataText[i] exists
+          if (i < dataText[i].length) {
+            // text exists! start typewriter animation
+           typeWriter(dataText[i], 0, function(){
+             // after callback (and whole text has been animated), start next text
+             StartTextAnimation(i + 1);
+           });
+          }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+      });
+    </script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+      /*$(function () {
+      var lastScrollTop = 0;
+      var $navbar = $('.navbar');
+
+      $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+
+        if (st > lastScrollTop) { // scroll down
+
+          // use this is jQuery full is used
+          $navbar.fadeOut()
+
+          // use this to use CSS3 animation
+          // $navbar.addClass("fade-out");
+          // $navbar.removeClass("fade-in");
+
+          // use this if no effect is required
+          // $navbar.hide();
+        } else { // scroll up
+
+          // use this is jQuery full is used
+          $navbar.fadeIn()
+
+          // use this to use CSS3 animation
+          // $navbar.addClass("fade-in");
+          // $navbar.removeClass("fade-out");
+
+          // use this if no effect is required
+          // $navbar.show();
+        }
+        lastScrollTop = st;
+      });
+    });*/
+  </script>
+  
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("#button").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+</script>
+  
+</head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav nav-fill shift ml-auto">
+            <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#projects">PROJECTS</a>
+            <a class="nav-item nav-link" href="#">RESUME</a>
+            <a class="nav-item nav-link" href="#">CONTACT</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <div id="fullpage">
+      <section>
+        <div class="landing-page">
+            <div class="background-images" >
+              <div class = "my-name-home">
+                <h3 class="sub-heading ">HELLO I'M</h3>
+                <h1 class="main-heading">GAURAV</h1>
+                <h1 class="main-heading"> GHONGDE.</h1>
+                <button class="my-btn"><h3 class="my-btn-text">HIRE ME</h3></button>
+              </div>
+            </div>
+            <div class="opening-format">
+                <a href="#projects" class="explore-btn" id="button">
+                  <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+                </a>
+                <img class="my-photo" src="images/Mask%20Group%202.png">
+                <img class="my-photo-path1" src="images/Path%201.png">
+                <div class="vl"> </div>
+                <div class="front-text">
+                  <h3 class = "animated-text-intro" >I'm a</h3>
+                  <h3 class = "animated-text"></h3>
+                </div>
+            </div>
+            <div></div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="projects" id="projects">
+          <h1>Projects</h1>
+          <br>
+          <div class="card-deck d-flex justify-content-center">
+            <div class="card text-white bg-dark
+     mb-3" style="max-width: 18rem;">
+
+              <div class="card-body">
+                <h3 class="card-title">GRE Vocab Builder</h3>
+                <img class="card-img-top" src="images/gre_app.gif" alt="Card image cap">
+                <p class="card-content">Desktop GUI application made entirely using Python, which helps GRE aspirants to improve their vocabulary through various Quizes and Statistics</p>
+                <p class="card-text"><small class="text-muted">Third Year Mini-Project - 2016-17</small></p>
+                <a href="#" class="btn btn-primary">SEE MORE</a>
+              </div>
+            </div>
+            <div class="card text-white bg-dark
+     mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <h3 class="card-title">Minify - Reduce your smartphone usage</h3>
+                <img class="card-img-top" src="images/minify_app.jpg" alt="Card image cap">
+                  <p class="card-content">An android application which tracks user activities and reminds them to use their smartphones less often</p>
+                <p class="card-text"><small class="text-muted">Personal Project - 2018</small></p>
+                <a href="#" class="btn btn-primary">SEE MORE</a>
+              </div>
+            </div>
+            <div class="card text-white bg-dark
+     mb-3" style="max-width: 18rem;">
+
+              <div class="card-body">
+                <h3 class="card-title">Movie Recommender System</h3>
+                  <img class="card-img-top" src="images/Artboard%20%E2%80%93%203.jpg" alt="Card image cap">
+                  <p class="card-content">Django Web App [Currently Ongoing]</p>
+                <p class="card-text"><small class="text-muted">Side Project 2018</small></p>
+                <a href="#" class="btn btn-primary">SEE MORE</a>
+              </div>
+            </div>
+            <div class="card text-white bg-dark
+     mb-3" style="max-width: 18rem;">
+
+              <div class="card-body">
+                  <h3 class="card-title">Facebook App UI Redesign</h3>
+                  <img class="card-img-top" src="images/facebook_redesign.jpg" alt="Card image cap">
+                  <p class="card-content">Just an alternative Facebook App UI Concept Design</p>
+                <p class="card-text"><small class="text-muted">Hobby Project 2018</small></p>
+                <a href="#" class="btn btn-primary">SEE MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="about">
+            <h1>MY ABOUT</h1>
+            <div class="icons">
+            </div>
+        </div>
+
+        <div class="Hire me">
+            <a href="#">Hire Me!</a>
+        </div>
+
+        <footer class="main-ftr">
+            <div class="ftr-row">
+              <p>© 2018 | RStack Studio | Gaurav Ghongde</p>
+              <div class="ftr-col1">
+                  <a href="#">Home</a>
+                  <a href="#">Projects</a>
+                  <a href="#">My CV</a>
+                  <a href="#">About</a>
+              </div>
+              <div class="ftr-col2"></div>
+              <div class="ftr-col3"></div>
+              <div class="ftr-col4"></div>
+            </div>
+        </footer>
+      </section>
+    </div>
+    
+</body>
+  
+</html>

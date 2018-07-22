@@ -1,0 +1,347 @@
+@font-face{
+   font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', sans-serif;
+
+}
+
+/*------------global-------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+
+p{
+
+}
+
+/*----------------*/
+
+
+/*--------------nav--------------*/
+
+.navbar-custom{
+    transition: 0.7s;
+    background: 
+    linear-gradient(45deg, rgba(92,47,90,0) 50%, rgba(92,47,90,0) 50%) no-repeat bottom;
+    width: 100%;
+    font-family: 'Lato';
+    letter-spacing: 7px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* change the brand and text color */
+    .navbar-custom
+    .navbar-custom .navbar-text {
+    color: white;
+}
+
+/* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+      padding: 20px;
+      height: 60px;
+    color: white;
+}
+
+/* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar {
+    min-height: 60px;
+}
+
+.navbar-brand {
+    padding: 0 25px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+
+.shift a{  
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+
+.shift .nav-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.shift .nav-item:hover:before {
+    visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.card-body{
+  background-color: rgba(179, 0, 254, 0.);
+}
+
+/*-----------------------landng page--------------------------*/
+
+.landing-page{
+    margin-top: -20px;
+    height: 685px;
+    background:rgba(23, 37, 42, 0.76);
+    z-index: -6;
+}
+
+.explore-btn{
+  position: fixed;
+  z-index: 8;
+  margin-top: 45%;
+  margin-left: 50%;
+  z-index: 0;
+}
+
+.my-name-home{
+    position: absolute;
+    margin: 260px 200px;
+    margin-left: 6%;
+    font-family: 'Lato';
+    z-index: 1;
+}
+
+.my-name-home .sub-heading{
+  
+    margin-left: 1%;
+    font-size: 190%;
+    letter-spacing: 10px;
+    color: #3AAFA9;
+}
+
+.my-name-home .main-heading{
+    position: a;
+    font-size: 70px;
+    letter-spacing: 15px;
+    color: #FEFFFF;
+}
+
+.my-name-home .my-btn{
+    margin-top: 40px;
+    padding: 8px 35px 2px;
+    border: 1px solid #FFF700;
+    background: transparent;
+    color: #FFF700;
+    transition: 0.7s;
+}
+
+.my-name-home .my-btn:hover{
+    margin-top: 30px;
+    padding: 8px 35px 2px;
+    background: #FFF700;
+    color: #17252A;
+    transition: 0.7s;
+}
+
+.my-name-home .my-btn-text{
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.vl {
+    margin-top: 27%;
+    position: fixed;
+    border-left: 4px solid rgba(250,250,250,0.4);
+    height: 30%;
+    left: 51%;
+    margin-left: 0px;
+    top: 0;
+}
+
+.my-photo{
+    position: relative;
+    float: right;
+    margin-left: 767px;
+    margin-top: -90px;
+    max-width: 610px;
+    z-index: -5;
+    
+}
+
+.my-photo-path1{
+  position: fixed;
+  height: 105%;
+}
+
+.opening-format .animated-text-intro{
+  margin-bottom: 1px;
+  letter-spacing: 5px;
+  color: #FFF700;
+}
+
+.opening-format .front-text{
+  position: fixed;
+  width: 150px;
+  margin-top: 28%;
+  color: aliceblue;
+  letter-spacing: 1px;
+    margin-left: 54%;
+    font-family: 'Lato';
+}
+
+
+/*------------------------PROJECTS---------------------------*/
+
+.projects{
+  position: absolute;
+  width: 100%;
+	padding: 20px;
+	background-color: #222;
+  z-index: 5;
+}
+
+.projects h1{
+    font-family: 'Playfair Display';
+    font-weight: 100;
+    color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 5px;
+    text-align: left;
+}
+/*
+.card img{
+}
+
+
+
+.card-text .text-muted{
+    color: darkslateblue !important;
+}
+
+
+*/
+
+/*------------------------card---------------------------*/
+
+.card {
+  display: block;
+    border: 1px solid dark;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+
+.card-body{
+  border-radius: 5px;
+  background-color: #ebebeb;
+  color: black;
+}
+
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.card-img-top{
+  padding-bottom: 15px;
+}
+
+
+.card-content {
+  text-align:left;
+  padding: 15px;
+}
+.card-title {
+  padding: 15px;
+  margin-top:15px;
+  font-family: 'Playfair Display';
+  font-weight: 900;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+
+.btn{
+  border-color: darkslategray;
+  background-color: transparent;
+  color: darkslategray;
+  font-family: 'Oswald' ;
+}
+
+.btn:hover{
+  border-color: darkslategray;
+  background-color: darkslategray;
+  color: whitesmoke;
+}
+
+/*--------------------- ABOUT PAGE ------------------------*/
+
+
+
+/*----------------mobile site optimization---------------------*/
+
+@media(max-width:580px){
+  
+    .landing-page{
+        margin-top: -20px;
+        height: 685px;
+        background: linear-gradient(to bottom right, rgba(130, 255, 247, 0.3), rgba(179, 0, 254, 0.5));
+        z-index: -5;
+    }
+    
+    .front-logo{
+        position: fixed;
+        margin: 130px 50px;
+        max-height: 250px;
+        z-index: -1;
+    }
+
+    .my-photo{
+        margin-top: 52px;
+        max-height: 740px;
+        margin-left: 80px;
+        position: fixed;
+        max-width: 468px;
+        z-index: -5;
+        opacity: 0.5;
+    }
+    
+}
+
